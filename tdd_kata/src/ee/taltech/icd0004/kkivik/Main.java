@@ -10,6 +10,9 @@ public class Main {
         if (name == null || name.isBlank()) {
             name = "my friend";
         }
+        if (name.chars().filter(Character::isLetter).allMatch(Character::isUpperCase)) {
+            return "HELLO, " + name + "!";
+        }
         return "Hello, " + name + ".";
     }
 }
