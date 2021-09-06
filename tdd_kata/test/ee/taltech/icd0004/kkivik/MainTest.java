@@ -38,4 +38,9 @@ class MainTest {
     void greeting_whitespaceString() {
         Assertions.assertEquals("Hello, my friend.", Main.greet("\t"));
     }
+
+    @Test
+    void greeting_shouting() {
+        Assertions.assertEquals("HELLO, JERRY!", Main.greet("JERRY"));
+    }
 }
