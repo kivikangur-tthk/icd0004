@@ -49,4 +49,10 @@ class MainTest {
         String[] names = {"Jill", "Jane"};
         Assertions.assertEquals("Hello, Jill and Jane.", Main.greet(names));
     }
+
+    @Test
+    void greeting_multipleNames() {
+        String[] names = {"Amy", "Brian", "Charlotte"};
+        Assertions.assertEquals("Hello, Amy, Brian, and Charlotte.", Main.greet(names));
+    }
 }
