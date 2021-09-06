@@ -55,4 +55,29 @@ class MainTest {
         String[] names = {"Amy", "Brian", "Charlotte"};
         Assertions.assertEquals("Hello, Amy, Brian, and Charlotte.", Main.greet(names));
     }
+
+    @Test
+    void greeting_multipleNamesWithOneShouting() {
+        String[] names = {"Amy", "BRIAN", "Charlotte"};
+        Assertions.assertEquals("Hello, Amy and Charlotte. AND HELLO, BRIAN!", Main.greet(names));
+    }
+
+    @Test
+    void greeting_multipleNamesWithTwoShouting() {
+        String[] names = {"Amy", "BRIAN", "Charlotte", "Jill", "JANE"};
+        Assertions.assertEquals("Hello, Amy, Charlotte, and Jill. AND HELLO, BRIAN AND JANE!", Main.greet(names));
+    }
+
+    @Test
+    void greeting_multipleNamesWithThreeShouting() {
+        String[] names = {"AMY", "BRIAN", "Charlotte", "Jill", "JANE"};
+        Assertions.assertEquals("Hello, Charlotte, and Jill. AND HELLO, AMY, BRIAN, AND JANE!", Main.greet(names));
+
+    }
+
+    @Test
+    void greeting_multipleNamesOnlyShouting() {
+        String[] names = {"AMY", "BRIAN", "JANE"};
+        Assertions.assertEquals("HELLO, AMY, BRIAN, AND JANE!", Main.greet(names));
+    }
 }
