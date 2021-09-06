@@ -7,6 +7,6 @@ public class Main {
     }
 
     public static String greet(String name) {
-        return "Hello, " + (name == null ? "my friend" : name) + ".";
+        return "Hello, " + (name == null || name.isBlank() ? "my friend" : name) + ".";
     }
 }
