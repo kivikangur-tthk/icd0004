@@ -26,7 +26,7 @@ class MainTest {
 
     @Test
     void greeting_null() {
-        Assertions.assertEquals("Hello, my friend.", Main.greet(null));
+        Assertions.assertEquals("Hello, my friend.", Main.greet((String) null));
     }
 
     @Test
@@ -42,5 +42,11 @@ class MainTest {
     @Test
     void greeting_shouting() {
         Assertions.assertEquals("HELLO, JERRY!", Main.greet("JERRY"));
+    }
+
+    @Test
+    void greeting_twoNames() {
+        String[] names = {"Jill", "Jane"};
+        Assertions.assertEquals("Hello, Jill and Jane.", Main.greet(names));
     }
 }

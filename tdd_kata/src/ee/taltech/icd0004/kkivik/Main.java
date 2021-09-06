@@ -15,4 +15,8 @@ public class Main {
         }
         return "Hello, " + name + ".";
     }
+
+    public static String greet(String[] names) {
+        return "";
+    }
 }
