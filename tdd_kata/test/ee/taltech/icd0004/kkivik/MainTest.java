@@ -23,4 +23,9 @@ class MainTest {
     void greeting_bob() {
         Assertions.assertEquals("Hello, Bob.", Main.greet("Bob"));
     }
+
+    @Test
+    void greeting_null() {
+        Assertions.assertEquals("Hello, my friend.", Main.greet(null));
+    }
 }
