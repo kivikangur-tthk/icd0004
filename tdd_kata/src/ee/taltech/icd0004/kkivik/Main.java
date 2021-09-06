@@ -17,6 +17,6 @@ public class Main {
     }
 
     public static String greet(String[] names) {
-        return "Hello, " + String.join(" and ", names) + ".";
+        return greet(String.join(" and ", names));
     }
 }
