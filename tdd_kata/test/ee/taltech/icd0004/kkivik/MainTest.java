@@ -28,4 +28,14 @@ class MainTest {
     void greeting_null() {
         Assertions.assertEquals("Hello, my friend.", Main.greet(null));
     }
+
+    @Test
+    void greeting_emptyString() {
+        Assertions.assertEquals("Hello, my friend.", Main.greet(""));
+    }
+
+    @Test
+    void greeting_whitespaceString() {
+        Assertions.assertEquals("Hello, my friend.", Main.greet("\t"));
+    }
 }
